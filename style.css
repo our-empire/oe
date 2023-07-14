@@ -57,3 +57,10 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+#container{
+	position:absolute;
+	width:1200px;
+	height:800px;
+	border:2px solid #000000;
+}
