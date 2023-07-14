@@ -15,9 +15,9 @@
   
 		<title>Our Empire - Наша Империя.</title>
 		
-		<p id="site-version">Версия сайта : 0.1</p>
+		<p id="site-version" align="center">Версия сайта : 0.1</p>
 
-		<h2>&copy НЕОФИЦИАЛЬНЫЙ САЙТ (ФАНАТСКИЙ).</h2>
+		<h2 align="center">&copy НЕОФИЦИАЛЬНЫЙ САЙТ (ФАНАТСКИЙ).</h2>
 	
 		<style>
   
@@ -60,8 +60,7 @@
 			/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
 			#tab-btn-1:checked~#content-1,
 			#tab-btn-2:checked~#content-2,
-			#tab-btn-3:checked~#content-3,
-			#tab-btn-4:checked~#content-4 {
+			#tab-btn-3:checked~#content-3 {
 				display: block;
 			}
 
@@ -109,14 +108,14 @@
 			<input type="radio" name="tab-btn" id="tab-btn-3" value="">
 	
 			<label for="tab-btn-3">Новости</label>
-			
-			<input type="radio" name="tab-btn" id="tab-btn-4" value="">
-	
-			<label for="tab-btn-4">ReMake новости</label>
-
+		
 			<div id="content-1">
 	
-				Содержимое 1...
+				<p>Our Empire - классическая пошаговая стратегия для Android устройств.
+
+				Великолепный игровой проект, который отдает дань классическим военным стратегиям с пошаговой боевой системой.
+
+				Также здесь для вас предусмотрен режим аркады и песочницы.</p>
 	  
 			</div>
 	
@@ -146,33 +145,27 @@
 	
 			<div id="content-3">
 	
-				Содержимое 3...
+				Все регионы Европы (и части Азии с Африкой) были нарисованы
 	  
-			</div>
-			
-			<div id="content-4">
-			
-				Содержимое 4...
-			
 			</div>
 	
 		</div>
   
 		<div id="answers-to-questuions">
 		
-			<h2 id="about">Здесь будут ответы на вопросы :</h2>
+			<h2 id="about" align="center">Здесь будут ответы на вопросы :</h2>
 		
 			<button class="glow-on-hover" type="button" onclick="multiplayer()">Почему нет мультиплеера?</button>
 			
-			<div id="answer1"></div>
+			<div id="answer1" ></div>
 			
 			<br>
 			
 			<br>
 			
-			<button class="glow-on-hover" type="button" onclick="worldMap()">Почему нет карты мира?</button>
+			<button class="glow-on-hover" type="button" onclick="worldMap()" >Почему нет карты мира?</button>
 			
-			<div id="answer2"></div>
+			<div id="answer2" ></div>
 			
 			<br>
 			
@@ -180,7 +173,7 @@
 			
 			<button class="glow-on-hover" type="button" onclick="addNewFichs()">Можно ли добавить : авиацию, ядерное оружие, военный флот, внутреннюю политику, ничьи территории, восстания, модификации игроков?</button>
 			
-			<div id="answer3"></div>
+			<div id="answer3" ></div>
 			
 			<br>
 			
@@ -188,7 +181,7 @@
 			
 			<button class="glow-on-hover" type="button" onclick="ReMake()">Что такое ReMake (ремейк)?</button>
 			
-			<div id="answer4"></div>
+			<div id="answer4" ></div>
 		
 		</div>
   
@@ -204,7 +197,7 @@
 
 		}
 		
-		var answer2_div = document.detElementById("answer2");
+		var answer2_div = document.getElementById("answer2");
 		
 		function worldMap(){
 		
@@ -229,9 +222,17 @@
 	</script>
 	
 	<div id="autors-hrefs">
-	
-		<input>
 			
+	</div>
+	
+	<div class="Europe-Map" id="Europe-Map">
+	
+		<br>
+		
+		
+	
+		<text>Здесь пока нечего нет, но скоро появится)</text>
+	
 	</div>
 
 </html>
