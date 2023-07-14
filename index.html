@@ -12,6 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   
 		<title>Our Empire - Наша Империя.</title>
+		
+		<p id="site-version">Версия сайта : 0.1</p>
 	
 		<style>
   
@@ -120,11 +122,17 @@
 				
 				<br>
 				
+				<br>
+				
 				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpirePro">Купить игру можно здесь.</a>
 				
 				<br>
 				
+				<br>
+				
 				<a href="https://drive.google.com/file/d/1VG7hMITIhtbPhhPxb7fcYbsuu8_dcgOf/view">Неудалось купить Pro версию? Ее можно скачать бесплатно здесь.</a>
+				
+				<br>
 				
 				<br>
 				
@@ -156,15 +164,27 @@
 			
 			<br>
 			
+			<br>
+			
 			<button class="glow-on-hover" type="button" onclick="worldMap()">Почему нет карты мира?</button>
 			
 			<div id="answer2"></div>
 			
 			<br>
 			
+			<br>
+			
 			<button class="glow-on-hover" type="button" onclick="addNewFichs()">Можно ли добавить : авиацию, ядерное оружие, военный флот, внутреннюю политику, ничьи территории, восстания, модификации игроков?</button>
 			
 			<div id="answer3"></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="ReMake()">Что такое ReMake (ремейк)?</button>
+			
+			<div id="answer4"></div>
 		
 		</div>
   
@@ -184,7 +204,7 @@
 		
 		function worldMap(){
 		
-			answer2.innerHTML = 'Устройства Android не могут справиться с нагрузкой. Но в будующем он постарается добавить карту мира, если удастся оптимизировать игру.';
+			answer2.innerHTML = 'Устройства Android не могут справиться с нагрузкой. Но в будующем разработчик постарается добавить карту мира, если удастся оптимизировать игру.';
 		
 		}
 		
@@ -195,7 +215,19 @@
 			answer3.innerHTML = "Да, единственный вопрос заключается в том, как именно сбалансировать и совместить это с существующим балансом и игровым дизайном.";
 		
 		}
+		
+		function ReMake(){
+		
+			answer4.innerHTML = "Ремейк - полная переделка игры с нуля в целях оптимизации и добавления новых регионов, скорее выйдет этим летом.";
+		
+		}
 
 	</script>
+	
+	<div id="autors-hrefs">
+	
+		<input>
+			
+	</div>
 
 </html>
