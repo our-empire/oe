@@ -1,3 +1,4 @@
+
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -56,58 +57,4 @@
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
-}
-
-#container{
-	position:absolute;
-	width:1200px;
-	height:800px;
-	border:2px solid #000000;
-}
-h1{
-
-      font-family : sans-serif;
-	
-}
-
-h2{
-
-      font-family : sans-serif;
-	
-}
-
-h3{
-
-      font-family : sans-serif;
-	
-}
-
-h4{
-
-      font-family : sans-serif;
-	
-}
-
-h5{
-
-      font-family : sans-serif;
-	
-}
-
-h6{
-
-      font-family : sans-serif;
-	
-}
-
-p{
-
-      font-family : sans-serif;
-	
-}
-
-text{
-
-      font-family : sans-serif;
-	
 }
