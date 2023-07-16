@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<a href="index.html">Русский язык</a> <a href="indexEN.html">English Language</a>
+	
+		<meta charset="utf-8">
+  
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link rel="stylesheet" href="styleRU.css">
+
+		<link rel="icon" href="oe.jpg" type="image/x-icon">
+  
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+		<title>Our Empire - About Game.</title>
+		
+		<p id="site-version" align="center">Site version : 0.4</p>
+		
+		<button class="glow-on-hover" type="button" onclick="updates()">What has changed in 3 updates?</button>
+			
+		<div id="answer6" ></div>
+
+		<h2 align="center">&copy UNOFFICIAL WEBSITE (FUN SITE).</h2>
+	
+		<style>
+  
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #212529;
+				text-align: left;
+				background-color: #fff;
+			}
+
+			.tabs {
+				font-size: 0;
+				max-width: 350px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.tabs>input[type="radio"] {
+				display: none;
+			}
+
+			.tabs>div {
+				/* скрыть контент по умолчанию */
+				display: none;
+				border: 1px solid #e0e0e0;
+				padding: 10px 15px;
+				font-size: 16px;
+			}
+
+			/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+			#tab-btn-1:checked~#content-1,
+			#tab-btn-2:checked~#content-2,
+			#tab-btn-3:checked~#content-3 {
+				display: block;
+			}
+
+			.tabs>label {
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				user-select: none;
+				background-color: #f5f5f5;
+				border: 1px solid #e0e0e0;
+				padding: 2px 8px;
+				font-size: 16px;
+				line-height: 1.5;
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+				cursor: pointer;
+				position: relative;
+				top: 1px;
+			}
+
+			.tabs>label:not(:first-of-type) {
+				border-left: none;
+			}
+
+			.tabs>input[type="radio"]:checked+label {
+				background-color: #fff;
+				border-bottom: 1px solid #fff;
+			}
+			
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="tabs">
+  
+			<input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+	
+			<label for="tab-btn-1">About Game</label>
+	
+			<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+	
+			<label for="tab-btn-2">Dowload Game</label>
+	
+			<input type="radio" name="tab-btn" id="tab-btn-3" value="">
+	
+			<label for="tab-btn-3">Game News</label>
+		
+			<div id="content-1">
+	
+				<p>Our Empire - a classic turn-based strategy game for Android devices.
+
+A great game project that pays tribute to classic military strategies with a turn-based combat system.
+
+There is also an arcade and sandbox mode for you.</p>
+	  
+			</div>
+	
+			<div id="content-2">
+	
+				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpire">You can dowload the game here.</a>
+				
+				<br>
+				
+				<br>
+				
+				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpirePro">You can buy the Pro version here.</a>
+				
+				<br>
+				
+				<br>
+				
+				<a href="https://drive.google.com/file/d/1tZW7AiTXN-xEPRR1FJgm3ek_ngUu8dv9/view?usp=share_link">The game has beta-remake, You can dowload its here.</a>
+	  
+			</div>
+	
+			<div id="content-3">
+	
+				All Europe regions (including parts of Africa and Asia) were drawn
+	  
+			</div>
+	
+		</div>
+  
+		<div id="answers-to-questuions">
+		
+			<h2 id="about" align="center">Here are the answers to the questions:</h2>
+		
+			<button class="glow-on-hover" type="button" onclick="multiplayer()">Why is there no multiplayer?</button>
+			
+			<div id="answer1" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="worldMap()" >Why is there no world map?</button>
+			
+			<div id="answer2" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="addNewFichs()">Is it possible to add: aviation, nuclear weapons, navy, internal politics, nobody's territories, rebellions, player modifications?</button>
+			
+			<div id="answer3" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="ReMake()">What is the ReMake?</button>
+			
+			<div id="answer4" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="oePro()">Why is there a paid version?</button>
+			
+			<div id="answer5" ></div>
+		
+		</div>
+		
+		
+  
+	</body>
+	
+	<script>
+	
+		var answer1_div = document.getElementById("answer1");
+
+		function multiplayer(){
+
+			answer1.innerHTML = 'Developer lacks skills.';
+
+		}
+		
+		var answer2_div = document.getElementById("answer2");
+		
+		function worldMap(){
+		
+			answer2.innerHTML = 'Android devices cant handle the load. But in the future, the developer will try to add a world map if the game can be optimized.';
+		
+		}
+		
+		var answer3_div = document.getElementById("answer3");
+		
+		function addNewFichs(){
+		
+			answer3.innerHTML = "Yes, the only question is how exactly to balance and fit this with the existing balance and game design.";
+		
+		}
+		
+		function ReMake(){
+		
+			answer4.innerHTML = "The remake is a complete remake of the game from the ground up to optimize and add new regions, and will most likely be released this summer.";
+		
+		}
+		
+		function oePro(){
+		
+			answer5.innerHTML = "The paid version exists to support the author, it costs only 20.22 rubles, and differs only in the map of Ancient Europe (-400 and 200).";
+		
+		}
+		
+		function updates(){
+		
+			answer6.innerHTML = "0.2 : added 5 button in game questions, 0.3 : added online chat, 0.4 : added English language.";
+		
+		}
+
+	</script>
+	
+	<div id="autors-hrefs">
+			
+	</div>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<div id="container">
+	
+		<br>
+		
+		
+	
+		<br>
+		
+		<h2>Here is the online chat<h2>
+		
+		<br>
+		
+		
+	
+	</div>
+	
+	
+
+</html>
+
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <meta charset=utf-8>
+    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script src="https://comet-server.com/CometServerApi.js" type="text/javascript"></script>
+    
+    <style>
+    pre{
+        border: 1px solid #ccc;
+        padding: 5px;
+        background-color: #EEE;
+    }
+    </style>
+</head>
+<body>
+
+<div id="web_chat"></div>
+
+<div>
+ Name :<input type="text" id="name"><br><br>
+ Text: <textarea id="text"></textarea><br>
+ <input type="button" onclick="send();" value="send" ><br>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+{ 
+    cometApi.start({node:"app.comet-server.ru", dev_id:15 })
+    
+    cometApi.subscription("simplechat.newMessage", function(event){
+        $("#web_chat").append('<b>'+HtmlEncode(event.data.name)+'</b>')
+        $("#web_chat").append('<pre>'+HtmlEncode(event.data.text)+'</pre>')
+        $("#web_chat").append('<br>')
+    })
+})
+
+function HtmlEncode(s)
+{
+  var el = document.createElement("div");
+  el.innerText = el.textContent = s;
+  s = el.innerHTML;
+  return s;
+}
+
+    
+function send()
+{
+   var name = $('#name').val();
+   var text = $('#text').val();
+   
+   $.ajax({
+        url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
+        type: "POST", 
+        data:"text="+encodeURIComponent(text)+"&name="+encodeURIComponent(name)
+   });
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
