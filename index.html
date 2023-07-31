@@ -1,82 +1,546 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Affordable and professional web design">
-	  <meta name="keywords" content="web design, affordable web design, professional web design">
-  	<meta name="author" content="Brad Traversy">
-    <title>Acme Web Deisgn | Welcome</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="img/IMG_20230731_195147_492.jpg">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">Our Empire - Наша Империя, Наша Игра.</span></h1>
-        </div>
-        <nav>
-          <ul>
-            <li class="current"><a href="index.html">Главная</a></li>
-            <li><a href="about.html">Об игре</a></li>
-            <li><a href="services.html">Игры</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<html lang="ru">
 
-    <section id="showcase">
-      <div class="container">
-        <h1>Our Empire - Наша Империя, Наша Игра.</h1>
-        <p>Пошаговая стратегия.
+	<head>
+	
+		<a href="index.html">Русский язык</a> <a href="indexEN.html">English Language</a>
+	
+		<meta charset="utf-8">
+  
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link rel="stylesheet" href="styleRU.css">
 
-(Внизу описания важные 3 памятки)
+		<link rel="icon" href="oe.jpg" type="image/x-icon">
+  
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+		<title>Our Empire - Наша Империя.</title>
+		
+		<p id="site-version" align="center">Версия сайта : 0.5.5</p>
+		
+		<button class="glow-on-hover" type="button" onclick="updates()">Что изменилось за 5 обновлений?</button>
+			
+		<div id="answer6" ></div>
 
-Our Empire — это пошаговая стратегия, в которой есть:
+		<h2 align="center">&copy НЕОФИЦИАЛЬНЫЙ САЙТ (ФАНАТСКИЙ).</h2>
+	
+		<style>
+  
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
 
-• Различные карты.
-• Разные эпохи и сценарии.
-• Дипломатия.
-• Простая ветка технологий.
-• Разные типы войск.
-• Строительства и экономика.
-• Редактор карты и сценариев.
-• Возможность создавать и сохранять свои сценарии.</p>
-      </div>
-    </section>
+			body {
+				margin: 0;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #212529;
+				text-align: left;
+				background-color: #fff;
+			}
 
-    <section id="newsletter">
-      <div class="container">
-        <h1>Подпишитесь на рассылку.</h1>
-        <form>
-          <input type="email" placeholder="Ваш Email..." required>
-          <button type="submit" class="button_1">Подписаться</button>
-        </form>
-      </div>
-    </section>
+			.tabs {
+				font-size: 0;
+				max-width: 350px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="./img/IMG_20230731_195153_093.png">
-          <h3>HTML5 Markup</h3>
-          <p>Создание фанатских сайтов на HTML5, всего создано 3 фанатских сайта по Our Empire.</p>
-        </div>
-        <div class="box">
-          <img src="./img/IMG_20230731_195155_481.png">
-          <h3>C# Programming</h3>
-          <p>Программирование на C# - обязательное действие для создание игр на Unity.</p>
-        </div>
-        <div class="box">
-          <img src="./img/IMG_20230731_195156_444.png">
-          <h3>Graphic Design</h3>
-          <p>Графический Дизайн - одна из фишек Sk Games Studio. Он сумел несколько раз создать удобный интерфейс для своих игр.</p>
-        </div>
-      </div>
-    </section>
+			.tabs>input[type="radio"] {
+				display: none;
+			}
 
-    <footer>
-      <p>Неофициальный сайт по игре Sk Games &copy; 2023</p>
-    </footer>
-  </body>
+			.tabs>div {
+				/* скрыть контент по умолчанию */
+				display: none;
+				border: 1px solid #e0e0e0;
+				padding: 10px 15px;
+				font-size: 16px;
+			}
+
+			/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+			#tab-btn-1:checked~#content-1,
+			#tab-btn-2:checked~#content-2,
+			#tab-btn-3:checked~#content-3 {
+				display: block;
+			}
+
+			.tabs>label {
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				user-select: none;
+				background-color: #f5f5f5;
+				border: 1px solid #e0e0e0;
+				padding: 2px 8px;
+				font-size: 16px;
+				line-height: 1.5;
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+				cursor: pointer;
+				position: relative;
+				top: 1px;
+			}
+
+			.tabs>label:not(:first-of-type) {
+				border-left: none;
+			}
+
+			.tabs>input[type="radio"]:checked+label {
+				background-color: #fff;
+				border-bottom: 1px solid #fff;
+			}
+			
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="tabs">
+  
+			<input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+	
+			<label for="tab-btn-1">Об игре</label>
+	
+			<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+	
+			<label for="tab-btn-2">Скачать игру</label>
+	
+			<input type="radio" name="tab-btn" id="tab-btn-3" value="">
+	
+			<label for="tab-btn-3">Новости</label>
+		
+			<div id="content-1">
+	
+				<p>Our Empire - классическая пошаговая стратегия для Android устройств.
+
+				Великолепный игровой проект, который отдает дань классическим военным стратегиям с пошаговой боевой системой.
+
+				Также здесь для вас предусмотрен режим аркады и песочницы.</p>
+	  
+			</div>
+	
+			<div id="content-2">
+	
+				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpire">Скачать игру можно здесь.</a>
+				
+				<br>
+				
+				<br>
+				
+				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpirePro">Купить игру можно здесь.</a>
+				
+				<br>
+				
+				<br>
+				
+				<a href="https://drive.google.com/file/d/1VG7hMITIhtbPhhPxb7fcYbsuu8_dcgOf/view">Неудалось купить Pro версию? Ее можно скачать бесплатно здесь.</a>
+				
+				<br>
+				
+				<br>
+				
+				<a href="https://drive.google.com/file/d/1tZW7AiTXN-xEPRR1FJgm3ek_ngUu8dv9/view?usp=share_link">У игры существует бета-ремейк, скачать его тоже можно здесь.</a>
+	  
+			</div>
+	
+			<div id="content-3">
+	
+				Все регионы Европы (и части Азии с Африкой) были нарисованы
+	  
+			</div>
+	
+		</div>
+  
+		<div id="answers-to-questuions">
+		
+			<h2 id="about" align="center">Здесь будут ответы на вопросы :</h2>
+		
+			<button class="glow-on-hover" type="button" onclick="multiplayer()">Почему нет мультиплеера?</button>
+			
+			<div id="answer1" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="worldMap()" >Почему нет карты мира?</button>
+			
+			<div id="answer2" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="addNewFichs()">Можно ли добавить : авиацию, ядерное оружие, военный флот, внутреннюю политику, ничьи территории, восстания, модификации игроков?</button>
+			
+			<div id="answer3" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="ReMake()">Что такое ReMake (ремейк)?</button>
+			
+			<div id="answer4" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<button class="glow-on-hover" type="button" onclick="oePro()">Почему существует платная версия?</button>
+			
+			<div id="answer5" ></div>
+		
+		</div>
+		
+		
+  
+	</body>
+	
+	<script>
+	
+		var answer1_div = document.getElementById("answer1");
+
+		function multiplayer(){
+
+			answer1.innerHTML = 'Разработчику не хватает навыков.';
+
+		}
+		
+		var answer2_div = document.getElementById("answer2");
+		
+		function worldMap(){
+		
+			answer2.innerHTML = 'Устройства Android не могут справиться с нагрузкой. Но в будующем разработчик постарается добавить карту мира, если удастся оптимизировать игру.';
+		
+		}
+		
+		var answer3_div = document.getElementById("answer3");
+		
+		function addNewFichs(){
+		
+			answer3.innerHTML = "Да, единственный вопрос заключается в том, как именно сбалансировать и совместить это с существующим балансом и игровым дизайном.";
+		
+		}
+		
+		function ReMake(){
+		
+			answer4.innerHTML = "Ремейк - полная переделка игры с нуля в целях оптимизации и добавления новых регионов, скорее выйдет этим летом.";
+		
+		}
+		
+		function oePro(){
+		
+			answer5.innerHTML = "Платная версия существует для поддержки автора, она стоит всего лишь 20,22 рубля, и отличается только картой Античной Европы (-400 и 200 года).";
+		
+		}
+		
+		function updates(){
+		
+			answer6.innerHTML = "0.2 : добавлена 5 кнопка в вопросах игры, 0.3 : добавлен онлайн-чатик, 0.4 : добавлен перевод на английский, 0.5 : добавлена таблица стран, 0.5.5 : был оптимизирован код примерно на 27 строк.";
+		
+		}
+
+	</script>
+	
+	<div id="autors-hrefs">
+			
+	</div>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+	<br>
+	
+		<div id="container">
+	
+			<br>
+		
+			<br>
+		
+			<h2>Здесь находится онлайн чатик<h2>
+		
+			<br>
+		
+		</div>
+	
+    <script language="ru" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	
+    <script src="https://comet-server.com/CometServerApi.js" type="text/javascript"></script>
+    
+    <style>
+	
+		pre{
+	
+			border: 1px solid #ccc;
+			
+			padding: 5px;
+		
+			background-color: #EEE;
+		
+		}
+	
+	</style>
+	
+	<div id="web_chat"></div>
+
+	<div>
+
+		Имя :<input type="text" id="name"><br><br>
+ 
+		Сообщение: <textarea id="text"></textarea><br>
+ 
+		<input type="button" onclick="send();" value="Отправить" ><br>
+ 
+	</div>
+
+	<script type="text/javascript">
+
+	$(document).ready(function()
+{ 
+		cometApi.start({node:"app.comet-server.ru", dev_id:15 })
+    
+		cometApi.subscription("simplechat.newMessage", function(event){
+	
+			$("#web_chat").append('<b>'+HtmlEncode(event.data.name)+'</b>')
+		
+			$("#web_chat").append('<pre>'+HtmlEncode(event.data.text)+'</pre>')
+		
+			$("#web_chat").append('<br>')
+		
+		})
+	
+	})
+
+	function HtmlEncode(s)
+
+	{
+	
+	var el = document.createElement("div");
+  
+	el.innerText = el.textContent = s;
+  
+	s = el.innerHTML;
+  
+	return s;
+  
+	}
+
+    
+	function send()
+
+	{
+
+	var name = $('#name').val();
+   
+	var text = $('#text').val();
+   
+	$.ajax({
+   
+        url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
+		
+        type: "POST", 
+		
+        data:"text="+encodeURIComponent(text)+"&name="+encodeURIComponent(name)
+		
+   });
+   
+}
+
+	</script>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<table border="1">
+  
+		<caption>Таблица новой карты Европы</caption>
+   
+		<tr>
+   
+			<th>Страна</th>
+	
+			<th>Столица</th>
+	
+		</tr>
+   
+		<tr><td>Австрия</td><td>Вена</td>
+   
+		<tr><td>Азербайджан</td><td>Баку</td>
+   
+		<tr><td>Албания</td><td>Тирана</td>
+   
+		<tr><td>Алжир</td><td>Алжир</td>
+   
+		<tr><td>Армения</td><td>Ереван</td>
+   
+		<tr><td>Беларусь</td><td>Минск</td>
+   
+		<tr><td>Бельгия</td><td>Брюссель</td>
+   
+		<tr><td>Болгария</td><td>София</td>
+   
+		<tr><td>Босния</td><td>Баня-Лука</td>
+   
+		<tr><td>Великобритания</td><td>Лондон</td>
+   
+		<tr><td>Венгрия</td><td>Будапешт</td>
+   
+		<tr><td>Германия</td><td>Берлин</td>
+   
+		<tr><td>Греция</td><td>Афины</td>
+   
+		<tr><td>Грузия</td><td>Тбилиси</td>
+   
+		<tr><td>Дания</td><td>Копенгаген</td>
+   
+		<tr><td>Египет</td><td>Каир</td>
+   
+		<tr><td>Израиль</td><td>Восточный Иерусалим</td>
+   
+		<tr><td>Иордания</td><td>Амман</td>
+   
+		<tr><td>Ирак</td><td>Багдад</td>
+   
+		<tr><td>Иран</td><td>Тегеран</td>
+   
+		<tr><td>Ирландия</td><td>Дублин</td>
+   
+		<tr><td>Исландия</td><td>Рейхкъявик</td>
+   
+		<tr><td>Испания</td><td>Мадрид</td>
+   
+		<tr><td>Италия</td><td>Рим</td>
+   
+		<tr><td>Йемен</td><td>Аден</td>
+   
+		<tr><td>Казахстан</td><td>Астана</td>
+   
+		<tr><td>Катар</td><td>Доха</td>
+   
+		<tr><td>Кипр</td><td>Южная Никосия</td>
+   
+		<tr><td>Косово</td><td>Приштина</td>
+   
+		<tr><td>Кувейт</td><td>Эль-Кувейт</td>
+		
+		<tr><td>Латвия</td><td>Рига</td>
+   
+		<tr><td>Ливан</td><td>Бейрут</td>
+   
+		<tr><td>Ливия</td><td>Триполи</td>
+   
+		<tr><td>Литва</td><td>Вильнюс</td>
+   
+		<tr><td>Люксембург</td><td>Люксембург Сити</td>
+   
+		<tr><td>Македония</td><td>Скопье</td>
+   
+		<tr><td>Марокко</td><td>Рабат</td>
+   
+		<tr><td>Молдавия</td><td>Кишинев</td>
+   
+		<tr><td>Нидерланды</td><td>Амстердам / Роттердам</td>
+   
+		<tr><td>Норвегия</td><td>Осло</td>
+   
+		<tr><td>ОАЭ</td><td>Абу-Даби</td>
+   
+		<tr><td>Оман</td><td>Маскат</td>
+   
+		<tr><td>Польша</td><td>Варшава</td>
+   
+		<tr><td>Португалия</td><td>Лиссабон</td>
+   
+		<tr><td>Россия</td><td>Москва</td>
+   
+		<tr><td>Румыния</td><td>Бухарест</td>
+   
+		<tr><td>Сербия</td><td>Белград</td>
+   
+		<tr><td>Сирия</td><td>Дамаск</td>
+   
+		<tr><td>Словения</td><td>Люблин</td>
+   
+		<tr><td>Тунис</td><td>Тунис</td>
+   
+		<tr><td>Туркменистан</td><td>Ашхабад</td>
+   
+		<tr><td>Турция</td><td>Анкара</td>
+   
+		<tr><td>Узбекистан</td><td>Ташкент</td>
+   
+		<tr><td>Украина</td><td>Киев</td>
+   
+		<tr><td>Фарерские Острова</td><td>Торсхавн</td>
+   
+		<tr><td>Финляндия</td><td>Хельсинки</td>
+   
+		<tr><td>Франция</td><td>Париж</td>
+   
+		<tr><td>Хорватия</td><td>Загреб</td>
+   
+		<tr><td>Черногория</td><td>Подгорица</td>
+   
+		<tr><td>Чехословакия</td><td>Прага</td>
+   
+		<tr><td>Швейцария</td><td>Берн</td>
+   
+		<tr><td>Швеция</td><td>Стокгольм</td>
+   
+   
+		<tr><td>Эстония</td><td>Таллин</td>
+   
+	</table>
+ 
 </html>
