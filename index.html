@@ -1,167 +1,24 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+
+<html>	
 
 	<head>
 	
-		<a href="index.html">Русский язык</a> <a href="indexEN.html">English Language</a>
+		<title>Our Empire - Наша Империя</title>
+		
+		<h2 class="mt-4">Версия сайта : 0.6</h2>
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
-		<meta charset="utf-8">
-  
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		
-		<link rel="stylesheet" href="styleRU.css">
-
-		<link rel="icon" href="oe.jpg" type="image/x-icon">
-  
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-		<title>Our Empire - Наша Империя.</title>
-		
-		<p id="site-version" align="center">Версия сайта : 0.5.5</p>
-		
-		<button class="glow-on-hover" type="button" onclick="updates()">Что изменилось за 5 обновлений?</button>
-			
-		<div id="answer6" ></div>
-
-		<h2 align="center">&copy НЕОФИЦИАЛЬНЫЙ САЙТ (ФАНАТСКИЙ).</h2>
-	
-		<style>
-  
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
-
-			body {
-				margin: 0;
-				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 1.5;
-				color: #212529;
-				text-align: left;
-				background-color: #fff;
-			}
-
-			.tabs {
-				font-size: 0;
-				max-width: 350px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			.tabs>input[type="radio"] {
-				display: none;
-			}
-
-			.tabs>div {
-				/* скрыть контент по умолчанию */
-				display: none;
-				border: 1px solid #e0e0e0;
-				padding: 10px 15px;
-				font-size: 16px;
-			}
-
-			/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
-			#tab-btn-1:checked~#content-1,
-			#tab-btn-2:checked~#content-2,
-			#tab-btn-3:checked~#content-3 {
-				display: block;
-			}
-
-			.tabs>label {
-				display: inline-block;
-				text-align: center;
-				vertical-align: middle;
-				user-select: none;
-				background-color: #f5f5f5;
-				border: 1px solid #e0e0e0;
-				padding: 2px 8px;
-				font-size: 16px;
-				line-height: 1.5;
-				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-				cursor: pointer;
-				position: relative;
-				top: 1px;
-			}
-
-			.tabs>label:not(:first-of-type) {
-				border-left: none;
-			}
-
-			.tabs>input[type="radio"]:checked+label {
-				background-color: #fff;
-				border-bottom: 1px solid #fff;
-			}
-			
-		</style>
-
 	</head>
-
+	
 	<body>
-
-		<div class="tabs">
-  
-			<input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
 	
-			<label for="tab-btn-1">Об игре</label>
-	
-			<input type="radio" name="tab-btn" id="tab-btn-2" value="">
-	
-			<label for="tab-btn-2">Скачать игру</label>
-	
-			<input type="radio" name="tab-btn" id="tab-btn-3" value="">
-	
-			<label for="tab-btn-3">Новости</label>
-		
-			<div id="content-1">
-	
-				<p>Our Empire - классическая пошаговая стратегия для Android устройств.
-
-				Великолепный игровой проект, который отдает дань классическим военным стратегиям с пошаговой боевой системой.
-
-				Также здесь для вас предусмотрен режим аркады и песочницы.</p>
-	  
-			</div>
-	
-			<div id="content-2">
-	
-				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpire">Скачать игру можно здесь.</a>
-				
-				<br>
-				
-				<br>
-				
-				<a href="https://play.google.com/store/apps/details?id=com.SKGames.OurEmpirePro">Купить игру можно здесь.</a>
-				
-				<br>
-				
-				<br>
-				
-				<a href="https://drive.google.com/file/d/1VG7hMITIhtbPhhPxb7fcYbsuu8_dcgOf/view">Неудалось купить Pro версию? Ее можно скачать бесплатно здесь.</a>
-				
-				<br>
-				
-				<br>
-				
-				<a href="https://drive.google.com/file/d/1tZW7AiTXN-xEPRR1FJgm3ek_ngUu8dv9/view?usp=share_link">У игры существует бета-ремейк, скачать его тоже можно здесь.</a>
-	  
-			</div>
-	
-			<div id="content-3">
-	
-				Все регионы Европы (и части Азии с Африкой) были нарисованы
-	  
-			</div>
-	
-		</div>
-  
-		<div id="answers-to-questuions">
+				<div id="answers-to-questuions">
 		
 			<h2 id="about" align="center">Здесь будут ответы на вопросы :</h2>
 		
-			<button class="glow-on-hover" type="button" onclick="multiplayer()">Почему нет мультиплеера?</button>
+			<button class="btn btn-success" type="button" onclick="multiplayer()">Почему нет мультиплеера?</button>
 			
 			<div id="answer1" ></div>
 			
@@ -169,7 +26,7 @@
 			
 			<br>
 			
-			<button class="glow-on-hover" type="button" onclick="worldMap()" >Почему нет карты мира?</button>
+			<button class="btn btn-success" type="button" onclick="worldMap()" >Почему нет карты мира?</button>
 			
 			<div id="answer2" ></div>
 			
@@ -177,7 +34,7 @@
 			
 			<br>
 			
-			<button class="glow-on-hover" type="button" onclick="addNewFichs()">Можно ли добавить : авиацию, ядерное оружие, военный флот, внутреннюю политику, ничьи территории, восстания, модификации игроков?</button>
+			<button class="btn btn-success" type="button" onclick="addNewFichs()">Можно ли добавить : авиацию, ядерное оружие, военный флот, внутреннюю политику, ничьи территории, восстания, модификации игроков?</button>
 			
 			<div id="answer3" ></div>
 			
@@ -185,7 +42,7 @@
 			
 			<br>
 			
-			<button class="glow-on-hover" type="button" onclick="ReMake()">Что такое ReMake (ремейк)?</button>
+			<button class="btn btn-success" type="button" onclick="ReMake()">Что такое ReMake (ремейк)?</button>
 			
 			<div id="answer4" ></div>
 			
@@ -193,91 +50,21 @@
 			
 			<br>
 			
-			<button class="glow-on-hover" type="button" onclick="oePro()">Почему существует платная версия?</button>
+			<button class="btn btn-success" type="button" onclick="oePro()">Почему существует платная версия?</button>
 			
 			<div id="answer5" ></div>
+			
+			<br>
+			
+			<br>
+			
+			<br>
 		
 		</div>
-		
-		
-  
+	
 	</body>
-	
-	<script>
-	
-		var answer1_div = document.getElementById("answer1");
 
-		function multiplayer(){
-
-			answer1.innerHTML = 'Разработчику не хватает навыков.';
-
-		}
-		
-		var answer2_div = document.getElementById("answer2");
-		
-		function worldMap(){
-		
-			answer2.innerHTML = 'Устройства Android не могут справиться с нагрузкой. Но в будующем разработчик постарается добавить карту мира, если удастся оптимизировать игру.';
-		
-		}
-		
-		var answer3_div = document.getElementById("answer3");
-		
-		function addNewFichs(){
-		
-			answer3.innerHTML = "Да, единственный вопрос заключается в том, как именно сбалансировать и совместить это с существующим балансом и игровым дизайном.";
-		
-		}
-		
-		function ReMake(){
-		
-			answer4.innerHTML = "Ремейк - полная переделка игры с нуля в целях оптимизации и добавления новых регионов, скорее выйдет этим летом.";
-		
-		}
-		
-		function oePro(){
-		
-			answer5.innerHTML = "Платная версия существует для поддержки автора, она стоит всего лишь 20,22 рубля, и отличается только картой Античной Европы (-400 и 200 года).";
-		
-		}
-		
-		function updates(){
-		
-			answer6.innerHTML = "0.2 : добавлена 5 кнопка в вопросах игры, 0.3 : добавлен онлайн-чатик, 0.4 : добавлен перевод на английский, 0.5 : добавлена таблица стран, 0.5.5 : был оптимизирован код примерно на 27 строк.";
-		
-		}
-
-	</script>
-	
-	<div id="autors-hrefs">
-			
-	</div>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-	<br>
-	
-		<div id="container">
+	<div id="container">
 	
 			<br>
 		
@@ -304,20 +91,40 @@
 			background-color: #EEE;
 		
 		}
+		
+		form{
+		
+			width : 500px;
+		
+		}
 	
 	</style>
 	
 	<div id="web_chat"></div>
 
 	<div>
+	
+		<form>
 
-		Имя :<input type="text" id="name"><br><br>
+			Имя : <input class="form-control" type="text" id="name"><br><br>
+	
+			Сообщение: <textarea class="form-control" id="text"></textarea><br><br>
  
-		Сообщение: <textarea id="text"></textarea><br>
- 
-		<input type="button" onclick="send();" value="Отправить" ><br>
+			<input class="btn btn-success" type="button" onclick="send();" value="Отправить" ><br>
+		
+		</form>
  
 	</div>
+	
+	<script>
+	
+		function fastReg(){
+		
+			var name = prompt("Впишите имя");
+		
+		}
+	
+	</script>
 
 	<script type="text/javascript">
 
@@ -373,174 +180,51 @@
 }
 
 	</script>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<br>
-
-	<table border="1">
-  
-		<caption>Таблица новой карты Европы</caption>
-   
-		<tr>
-   
-			<th>Страна</th>
 	
-			<th>Столица</th>
+	<script>
 	
-		</tr>
-   
-		<tr><td>Австрия</td><td>Вена</td>
-   
-		<tr><td>Азербайджан</td><td>Баку</td>
-   
-		<tr><td>Албания</td><td>Тирана</td>
-   
-		<tr><td>Алжир</td><td>Алжир</td>
-   
-		<tr><td>Армения</td><td>Ереван</td>
-   
-		<tr><td>Беларусь</td><td>Минск</td>
-   
-		<tr><td>Бельгия</td><td>Брюссель</td>
-   
-		<tr><td>Болгария</td><td>София</td>
-   
-		<tr><td>Босния</td><td>Баня-Лука</td>
-   
-		<tr><td>Великобритания</td><td>Лондон</td>
-   
-		<tr><td>Венгрия</td><td>Будапешт</td>
-   
-		<tr><td>Германия</td><td>Берлин</td>
-   
-		<tr><td>Греция</td><td>Афины</td>
-   
-		<tr><td>Грузия</td><td>Тбилиси</td>
-   
-		<tr><td>Дания</td><td>Копенгаген</td>
-   
-		<tr><td>Египет</td><td>Каир</td>
-   
-		<tr><td>Израиль</td><td>Восточный Иерусалим</td>
-   
-		<tr><td>Иордания</td><td>Амман</td>
-   
-		<tr><td>Ирак</td><td>Багдад</td>
-   
-		<tr><td>Иран</td><td>Тегеран</td>
-   
-		<tr><td>Ирландия</td><td>Дублин</td>
-   
-		<tr><td>Исландия</td><td>Рейхкъявик</td>
-   
-		<tr><td>Испания</td><td>Мадрид</td>
-   
-		<tr><td>Италия</td><td>Рим</td>
-   
-		<tr><td>Йемен</td><td>Аден</td>
-   
-		<tr><td>Казахстан</td><td>Астана</td>
-   
-		<tr><td>Катар</td><td>Доха</td>
-   
-		<tr><td>Кипр</td><td>Южная Никосия</td>
-   
-		<tr><td>Косово</td><td>Приштина</td>
-   
-		<tr><td>Кувейт</td><td>Эль-Кувейт</td>
+		var answer1_div = document.getElementById("answer1");
+
+		function multiplayer(){
+
+			answer1.innerHTML = 'Разработчику не хватает навыков.';
+
+		}
 		
-		<tr><td>Латвия</td><td>Рига</td>
-   
-		<tr><td>Ливан</td><td>Бейрут</td>
-   
-		<tr><td>Ливия</td><td>Триполи</td>
-   
-		<tr><td>Литва</td><td>Вильнюс</td>
-   
-		<tr><td>Люксембург</td><td>Люксембург Сити</td>
-   
-		<tr><td>Македония</td><td>Скопье</td>
-   
-		<tr><td>Марокко</td><td>Рабат</td>
-   
-		<tr><td>Молдавия</td><td>Кишинев</td>
-   
-		<tr><td>Нидерланды</td><td>Амстердам / Роттердам</td>
-   
-		<tr><td>Норвегия</td><td>Осло</td>
-   
-		<tr><td>ОАЭ</td><td>Абу-Даби</td>
-   
-		<tr><td>Оман</td><td>Маскат</td>
-   
-		<tr><td>Польша</td><td>Варшава</td>
-   
-		<tr><td>Португалия</td><td>Лиссабон</td>
-   
-		<tr><td>Россия</td><td>Москва</td>
-   
-		<tr><td>Румыния</td><td>Бухарест</td>
-   
-		<tr><td>Сербия</td><td>Белград</td>
-   
-		<tr><td>Сирия</td><td>Дамаск</td>
-   
-		<tr><td>Словения</td><td>Люблин</td>
-   
-		<tr><td>Тунис</td><td>Тунис</td>
-   
-		<tr><td>Туркменистан</td><td>Ашхабад</td>
-   
-		<tr><td>Турция</td><td>Анкара</td>
-   
-		<tr><td>Узбекистан</td><td>Ташкент</td>
-   
-		<tr><td>Украина</td><td>Киев</td>
-   
-		<tr><td>Фарерские Острова</td><td>Торсхавн</td>
-   
-		<tr><td>Финляндия</td><td>Хельсинки</td>
-   
-		<tr><td>Франция</td><td>Париж</td>
-   
-		<tr><td>Хорватия</td><td>Загреб</td>
-   
-		<tr><td>Черногория</td><td>Подгорица</td>
-   
-		<tr><td>Чехословакия</td><td>Прага</td>
-   
-		<tr><td>Швейцария</td><td>Берн</td>
-   
-		<tr><td>Швеция</td><td>Стокгольм</td>
-   
-   
-		<tr><td>Эстония</td><td>Таллин</td>
-   
-	</table>
- 
+		var answer2_div = document.getElementById("answer2");
+		
+		function worldMap(){
+		
+			answer2.innerHTML = 'Устройства Android не могут справиться с нагрузкой. Но в будующем разработчик постарается добавить карту мира, если удастся оптимизировать игру.';
+		
+		}
+		
+		var answer3_div = document.getElementById("answer3");
+		
+		function addNewFichs(){
+		
+			answer3.innerHTML = "Почти все это скоро будет добавлено в течении года.";
+		
+		}
+		
+		function ReMake(){
+		
+			answer4.innerHTML = "Ремейк - полная переделка игры с нуля в целях оптимизации и добавления новых регионов, скорее выйдет этим летом.";
+		
+		}
+		
+		function oePro(){
+		
+			answer5.innerHTML = "Платная версия существует для поддержки автора, она стоит всего лишь 20,23 рублей, и отличается только картой Античной Европы (400 и -200 года).";
+		
+		}
+		
+		function updates(){
+		
+			answer6.innerHTML = "0.2 : добавлена 5 кнопка в вопросах игры, 0.3 : добавлен онлайн-чатик, 0.4 : добавлен перевод на английский, 0.5 : добавлена таблица стран, 0.5.5 : был оптимизирован код примерно на 27 строк, 0.6.0 : глобальное обновление, убраны не нужные части кода, изменены стили, изменены ответы на вопросы.";
+		
+		}
+
+	</script>
+
 </html>
